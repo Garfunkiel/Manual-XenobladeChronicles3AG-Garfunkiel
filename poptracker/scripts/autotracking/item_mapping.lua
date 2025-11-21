@@ -80,5 +80,6 @@ ITEM_MAPPING = {
 	[BASE_ITEM_ID + 00075] = { { "GrandMarshal" } },
 	[BASE_ITEM_ID + 00076] = { { "MasterDriver" } },
 	[BASE_ITEM_ID + 00077] = { { "Sharpshooter" } },
-	[BASE_ITEM_ID + 00078] = { { "SkipNextShop" } }
+	[BASE_ITEM_ID + 00078] = { { "SkipNextShop" } },
+	[BASE_ITEM_ID + 00079] = { { "ItsMwambinTime" } }
 }

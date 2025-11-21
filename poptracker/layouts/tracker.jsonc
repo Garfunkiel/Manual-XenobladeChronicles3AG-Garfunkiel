@@ -42,7 +42,7 @@
             },
             {
               "type": "group",
-              "header": "Traps",
+              "header": "Traps/Filler",
               "dock": "top",
               "content": {
                 "type": "layout",
@@ -117,7 +117,7 @@
             },
             {
               "type": "group",
-              "header": "Traps",
+              "header": "Traps/Filler",
               "dock": "left",
               "margin": "0,0,3,0",
               "content": {

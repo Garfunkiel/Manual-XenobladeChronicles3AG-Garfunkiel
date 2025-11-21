@@ -77,5 +77,6 @@
   { "name": "Grand Marshal (Filler)",       "type": "toggle",     "img": "images/items/classes/grand_marshal.png",          "codes": "Classes,GrandMarshal" },
   { "name": "Master Driver (Filler)",       "type": "toggle",     "img": "images/items/classes/master_driver.png",          "codes": "Classes,MasterDriver" },
   { "name": "Sharpshooter (Filler)",        "type": "toggle",     "img": "images/items/classes/sharpshooter.png",           "codes": "Classes,Sharpshooter" },
-  { "name": "Skip Next Shop (Trap)",        "type": "consumable", "img": "images/items/skip_next_shop.png",      "max_quantity": 1000,    "codes": "Traps,SkipNextShop"   }
+  { "name": "Skip Next Shop (Trap)",        "type": "consumable", "img": "images/items/skip_next_shop.png",      "max_quantity": 1000,    "codes": "Traps,SkipNextShop"   },
+  { "name": "It's Mwambin' Time (Filler)",  "type": "consumable", "img": "images/items/its_mwambin_time.png",    "max_quantity": 1000,    "codes": "Filler,ItsMwambinTime" }
 ]

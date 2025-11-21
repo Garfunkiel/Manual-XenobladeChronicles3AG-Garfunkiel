@@ -78,6 +78,7 @@
         { "name": "Grand Marshal",                      "category": [ "Classes", "Future Redeemed" ],       "filler": true },
         { "name": "Master Driver",                      "category": [ "Classes", "Future Redeemed" ],       "filler": true },
         { "name": "Sharpshooter",                       "category": [ "Classes" ],                          "filler": true },
-        { "name": "Skip Next Shop",       "count": 0,   "category": [ "Traps" ],                            "trap": true }
+        { "name": "Skip Next Shop",       "count": 0,   "category": [ "Traps" ],                            "trap": true },
+        { "name": "It's Mwambin' Time",   "count": 0,   "category": [ "Filler" ],                           "filler": true }
     ]
 }
