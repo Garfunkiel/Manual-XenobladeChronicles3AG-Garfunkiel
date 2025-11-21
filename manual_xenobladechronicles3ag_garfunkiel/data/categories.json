@@ -11,5 +11,13 @@
     "Post Game": {
         "hidden": false,
         "yaml_option": ["PostGame"]
+    },
+    "Emblems": {
+        "hidden": false,
+        "yaml_option": ["Emblems"]
+    },
+    "Unlockable Emblems": {
+        "hidden": false,
+        "yaml_option": ["UnlockableEmblems"]
     }
 }

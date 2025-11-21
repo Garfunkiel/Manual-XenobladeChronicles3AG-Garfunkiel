@@ -24,9 +24,6 @@ This is a Manual APWorld that can be used with the Archsage's Gauntlet in Xenobl
 - Highest Stage Required: Choose a value between 30 and 140, inclusive.  Beginner (30), Intermediate (50), and Pro (140) are included as standard values.
 - All Heroes Required: Set based on whether you want your Victory condition to require recruiting every hero in the pool.
 
-## Notes:
-- If you choose a low stage number in your YAML, some useful items may be discarded at random when randomization occurs. The lowest allowed stage (30) has enough locations to include all progression items.
-
 ## Credits:
 - Github Actions (for Fuzzing and Testing): https://github.com/Eijebong
 - Poptracker Template Pack: https://github.com/Cyb3RGER/template_pack
