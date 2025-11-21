@@ -1,0 +1,15 @@
+{
+    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.categories.schema.json",
+    "DLC": {
+        "hidden": false,
+        "yaml_option": ["DLC"]
+    },
+    "Future Redeemed": {
+        "hidden": false,
+        "yaml_option": ["FutureRedeemed"]
+    },
+    "Post Game": {
+        "hidden": false,
+        "yaml_option": ["PostGame"]
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
+    "ChallengeStart": {
+        "starting": true,
+        "connects_to": ["Stages011+"]
+    },
+    "Stages011+": {
+        "requires": "|Stage 011 Unlock Key:1|",
+        "connects_to": ["Stages021+"]
+    },
+    "Stages021+": {
+        "requires": "|Stage 021 Unlock Key:1|",
+        "connects_to": ["Stages031+"]
+    },
+    "Stages031+": {
+        "requires": "|Stage 031 Unlock Key:1|",
+        "connects_to": ["Stages041+"]
+    },
+    "Stages041+": {
+        "requires": "|Stage 041 Unlock Key:1|",
+        "connects_to": ["Stages051+"]
+    },
+    "Stages051+": {
+        "requires": "|Stage 051 Unlock Key:1|",
+        "connects_to": ["Stages061+"]
+    },
+    "Stages061+": {
+        "requires": "|Stage 061 Unlock Key:1|",
+        "connects_to": ["Stages071+"]
+    },
+    "Stages071+": {
+        "requires": "|Stage 071 Unlock Key:1|",
+        "connects_to": ["Stages081+"]
+    },
+    "Stages081+": {
+        "requires": "|Stage 081 Unlock Key:1|",
+        "connects_to": ["Stages091+"]
+    },
+    "Stages091+": {
+        "requires": "|Stage 091 Unlock Key:1|",
+        "connects_to": ["Stages101+"]
+    },
+    "Stages101+": {
+        "requires": "|Stage 101 Unlock Key:1|",
+        "connects_to": ["Stages111+"]
+    },
+    "Stages111+": {
+        "requires": "|Stage 111 Unlock Key:1|",
+        "connects_to": ["Stages121+"]
+    },
+    "Stages121+": {
+        "requires": "|Stage 121 Unlock Key:1|",
+        "connects_to": ["Stages131+"]
+    },
+    "Stages131+": {
+        "requires": "|Stage 131 Unlock Key:1|"
+    }
+}
