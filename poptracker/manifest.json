@@ -1,0 +1,17 @@
+{
+  "name": "Xenoblade Chronicles 3: Archsage's Gauntlet Tracker",
+  "game_name": "Manual_XenobladeChronicles3AG_Garfunkiel",
+  "package_version": "1.0.0.0",
+  "package_uid": "Manual_XenobladeChronicles3AG_Garfunkiel",
+  "author": "Garfunkiel",
+  "min_poptracker_version": "0.25.9",
+  "target_poptracker_version": "0.32.0",
+  "variants": {
+    "standard": {
+      "display_name": "Map Tracker",
+      "flags": [
+        "apmanual"
+      ]
+    }
+  }
+}

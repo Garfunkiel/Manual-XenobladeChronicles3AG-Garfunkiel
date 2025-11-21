@@ -1,0 +1,194 @@
+{
+  // sets layouts for shadred items grids
+  // bigger example: https://github.com/Cyb3RGER/sm_ap_tracker/blob/main/layouts/items.json
+  "unlock_grid": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "item_margin": "10, 10",
+            "h_alignment": "left",
+            "rows": [
+              [
+                "UnlockKeys1",
+                "UnlockKeys2",
+                "UnlockKeys3",
+                "UnlockKeys4",
+                "UnlockKeys5",
+                "UnlockKeys6"
+              ],
+              [
+                "UnlockKeys7",
+                "UnlockKeys8",
+                "UnlockKeys9",
+                "UnlockKeys10",
+                "UnlockKeys11",
+                "UnlockKeys12"
+              ],
+              [
+                "UnlockKeys13",
+                "LuckySevenLicense",
+                "NopwatchRefills",
+                "ChosenHeroUnlock",
+                "ChosenClassUnlock"
+              ]
+            ]
+            }
+          ]
+      }
+    ]
+  },
+  "party_grid": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "item_margin": "10, 10",
+            "h_alignment": "left",
+            "rows": [
+              [
+                "Noah",
+                "Mio",
+                "Eunie",
+                "Taion",
+                "Lanz",
+                "Sena"
+              ],
+              [
+                "Ethel",
+                "Valdi",
+                "Zeon",
+                "Teach",
+                "RikuManana",
+                "Isurd"
+              ],
+              [
+                "Juniper",
+                "Gray",
+                "Alexandria",
+                "Ashera",
+                "Monica",
+                "Triton"
+              ],
+              [
+                "Fiona",
+                "Ghondor",
+                "Miyabi",
+                "Cammuravi",
+                "Segiri",
+                "Nia"
+              ],
+              [
+                "Melia",
+                "Ino",
+                "Masha",
+                "Shulk",
+                "Rex",
+                "Mwamba"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "shared_item_grid": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "item_margin": "10, 10",
+            "h_alignment": "left",
+            "rows": [
+              [
+                "Swordfighter",
+                "Zephyr",
+                "MedicGunner",
+                "Tactician",
+                "HeavyGuard",
+                "Ogre"
+              ],
+              [
+                "FlashFencer",
+                "WarMedic",
+                "GuardianCommander",
+                "Thaumaturge",
+                "Yumsmith",
+                "FullMetalJaguar"
+              ],
+              [
+                "Strategos",
+                "Stalker",
+                "LoneExile",
+                "Incursor",
+                "LostVanguard",
+                "Signifer"
+              ],
+              [
+                "Soulhacker",
+                "MartialArtist",
+                "Troubadour",
+                "Seraph",
+                "MachineAssassin",
+                "Lifesage"
+              ],
+              [
+                "RoyalSummoner",
+                "NoponicChampion",
+                "Lapidarist",
+                "GrandMarshal",
+                "MasterDriver",
+                "Sharpshooter"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "trap_grid": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "item_margin": "10, 10",
+            "h_alignment": "left",
+            "rows": [
+              [
+                "SkipNextShop"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
