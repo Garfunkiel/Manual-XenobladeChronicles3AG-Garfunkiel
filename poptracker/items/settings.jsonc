@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Emblems",
+    "type": "toggle",
+    "codes": "Emblems,Emblems_on",
+    "initial_active_state": true
+  },
+  {
+    "name": "UnlockableEmblems",
+    "type": "toggle",
+    "codes": "UnlockableEmblems,UnlockableEmblems_on",
+    "initial_active_state": true
+  },
+  {
+    "name": "DLC",
+    "type": "toggle",
+    "codes": "DLC,DLC_on",
+    "initial_active_state": true
+  },
+  {
+    "name": "PostGame",
+    "type": "toggle",
+    "codes": "PostGame,PostGame_on",
+    "initial_active_state": true
+  },
+  {
+    "name": "FutureRedeemed",
+    "type": "toggle",
+    "codes": "FutureRedeemed,FutureRedeemed_on",
+    "initial_active_state": true
+  }
+]
