@@ -55,11 +55,20 @@
           "type": "tabbed",
           "tabs": [
             {
-              "title": "Locations",
+              "title": "Summary",
               "content": {
                 "type": "map",
                 "maps": [
                   "map1"
+                ]
+              }
+            },
+            {
+              "title": "Emblems",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "map_emblems"
                 ]
               }
             }
@@ -133,11 +142,20 @@
           "type": "tabbed",
           "tabs": [
             {
-              "title": "Locations",
+              "title": "Summary",
               "content": {
                 "type": "map",
                 "maps": [
                   "map1"
+                ]
+              }
+            },
+            {
+              "title": "Emblems",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "map_emblems"
                 ]
               }
             }

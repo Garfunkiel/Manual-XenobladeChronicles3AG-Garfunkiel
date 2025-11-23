@@ -5,5 +5,11 @@
     "location_size": 48,
     "location_border_thickness": 4,
     "img": "images/maps/map.png"
+  },
+  {
+    "name": "map_emblems",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/emblems.png"
   }
 ]
