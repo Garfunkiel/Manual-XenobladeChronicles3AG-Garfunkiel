@@ -5,6 +5,30 @@ from BaseClasses import MultiWorld, CollectionState
 
 import re
 
+def isEmblemInLogic(multiworld: MultiWorld, player: int, rarity: str):
+    highest_stage = get_option_value(multiworld, player, "highest_stage_required")
+
+    if (not isinstance(highest_stage, int)):
+        return False
+
+    stars = int(rarity)
+
+    if (stars <= 1):
+        return True
+
+    mult = 0.34 if stars == 2 else 0.66
+
+    rule = ""
+    counter = 11
+
+    while ((mult * highest_stage + 1) >= counter):
+        if (rule != ""):
+            rule += " AND "
+        rule += f"|Stage {counter:03d} Unlock Key:1|"
+        counter += 10
+
+    return rule
+
 def canClaimVictory(multiworld: MultiWorld, player: int):
     highest_stage = get_option_value(multiworld, player, "highest_stage_required")
     all = get_option_value(multiworld, player, "all_heroes_required")
