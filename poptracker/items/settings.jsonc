@@ -28,5 +28,17 @@
     "type": "toggle",
     "codes": "FutureRedeemed,FutureRedeemed_on",
     "initial_active_state": true
+  },
+  {
+    "name": "highest_stage_required",
+    "type": "consumable",
+    "codes": "highest_stage_required",
+    "initial_active_state": 0
+  },
+  {
+    "name": "all_heroes_required",
+    "type": "toggle",
+    "codes": "all_heroes_required,all_heroes_required_on",
+    "initial_active_state": false
   }
 ]

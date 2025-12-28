@@ -124,6 +124,9 @@ function apply_slot_data(slot_data)
         elseif obj.Type == 'progressive' then
             obj.CurrentStage = v
             return v
+        elseif obj.Type == 'consumable' then
+            obj.AcquiredCount = v
+            return v
         else
             print(string.format("Unsupported item type '%s' for item '%s'", tostring(obj.Type), item_code))
             return nil
@@ -135,6 +138,8 @@ function apply_slot_data(slot_data)
     setFromSlotData('DLC', 'DLC')
     setFromSlotData('FutureRedeemed', 'FutureRedeemed')
     setFromSlotData('PostGame', 'PostGame')
+    setFromSlotData('highest_stage_required', 'highest_stage_required')
+    setFromSlotData('all_heroes_required', 'all_heroes_required')
 
 	-- put any code here that slot_data should affect (toggling setting items for example)
 end

@@ -3,7 +3,7 @@
     "name": "Victory",
     "children": [
       { "name": "Gauntlet Complete", "sections": [
-        { "name": "", "item_count": 1, "access_rules": [ "VictoryCondition" ] }
+        { "name": "", "item_count": 1, "access_rules": [ "^$canClaimVictory" ] }
       ], "map_locations": [{ "map": "map1", "x": 2725, "y": 1380 } ]}
     ]
   },
@@ -191,66 +191,66 @@
     "children": [
       { "name": "Emblems A-B",
         "sections": [
-          { "name": "Absorb HP Emblem Purchased",                 "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Agility Up Emblem Purchased",                "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Agnian Prosperity Emblem Purchased",         "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Agnian Zeal Emblem Purchased",               "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Area Attack Emblem Purchased",               "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Attack Up Emblem Purchased",                 "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Attack Up After Use Emblem Purchased",       "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Attract Events Emblem Purchased",            "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Auto-Attack Up Emblem Purchased",            "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Boss HP Down Emblem Purchased",              "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" }
+          { "name": "Absorb HP Emblem Purchased",                 "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Agility Up Emblem Purchased",                "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Agnian Prosperity Emblem Purchased",         "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Agnian Zeal Emblem Purchased",               "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Area Attack Emblem Purchased",               "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Attack Up Emblem Purchased",                 "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Attack Up After Use Emblem Purchased",       "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "UnlockableEmblems,Emblems" ]},
+          { "name": "Attract Events Emblem Purchased",            "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Auto-Attack Up Emblem Purchased",            "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Boss HP Down Emblem Purchased",              "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "UnlockableEmblems,Emblems" ]}
         ],
         "map_locations": [{ "map": "map1", "x": 150, "y": 1250 }]
       },
       { "name": "Emblems C-E",
         "sections": [
-          { "name": "Combo Duration Up Emblem Purchased",         "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Combo to Attack Emblem Purchased",           "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Combo to Chain Emblem Purchased",            "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Curse to Attack Emblem Purchased",           "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Curse to Recharge Emblem Purchased",         "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Damage Ratio Up Emblem Purchased",           "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Debuff Duration Up Emblem Purchased",        "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Debuff Rate Up Emblem Purchased",            "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Debuff to Break Emblem Purchased",           "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Debuffing Attack Emblem Purchased",          "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Defense Up Emblem Purchased",                "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Dexterity Up Emblem Purchased",              "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Discount Card Emblem Purchased",             "item_count": 1, "visibility_rules": "Emblems" }
+          { "name": "Combo Duration Up Emblem Purchased",         "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Combo to Attack Emblem Purchased",           "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "UnlockableEmblems,Emblems" ]},
+          { "name": "Combo to Chain Emblem Purchased",            "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Curse to Attack Emblem Purchased",           "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Curse to Recharge Emblem Purchased",         "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Damage Ratio Up Emblem Purchased",           "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Debuff Duration Up Emblem Purchased",        "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Debuff Rate Up Emblem Purchased",            "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Debuff to Break Emblem Purchased",           "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Debuffing Attack Emblem Purchased",          "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "UnlockableEmblems,Emblems" ]},
+          { "name": "Defense Up Emblem Purchased",                "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "UnlockableEmblems,Emblems" ]},
+          { "name": "Dexterity Up Emblem Purchased",              "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ]},
+          { "name": "Discount Card Emblem Purchased",             "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "Emblems" ]}
         ],
         "map_locations": [{ "map": "map1", "x": 350, "y": 1250 }]
       },
       { "name": "Emblems F-L",
         "sections": [
-          { "name": "Fast Attack Emblem Purchased",               "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Faster Chain Build Emblem Purchased",        "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Focus: Attackers Emblem Purchased",          "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Focus: Defenders Emblem Purchased",          "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Focus: Healers Emblem Purchased",            "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Focus: Role Unity Emblem Purchased",         "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Healing Power Up Emblem Purchased",          "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Kevesi Prosperity Emblem Purchased",         "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Kevesi Zeal Emblem Purchased",               "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Last-Ditch Effort Emblem Purchased",         "item_count": 1, "visibility_rules": "Emblems" }
+          { "name": "Fast Attack Emblem Purchased",               "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Faster Chain Build Emblem Purchased",        "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Focus: Attackers Emblem Purchased",          "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Focus: Defenders Emblem Purchased",          "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Focus: Healers Emblem Purchased",            "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Focus: Role Unity Emblem Purchased",         "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "UnlockableEmblems,Emblems" ] },
+          { "name": "Healing Power Up Emblem Purchased",          "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Kevesi Prosperity Emblem Purchased",         "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Kevesi Zeal Emblem Purchased",               "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Last-Ditch Effort Emblem Purchased",         "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] }
         ],
         "map_locations": [{ "map": "map1", "x": 550, "y": 1250 }]
       },
       { "name": "Emblems M-Z",
         "sections": [
-          { "name": "Max HP Up Emblem Purchased",                 "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Moneybags Emblem Purchased",                 "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Other Prosperity Emblem Purchased",          "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Other Zeal Emblem Purchased",                "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Refund Chain Emblem Purchased",              "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Rescue Recharge Emblem Purchased",           "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Rescue to Attack Emblem Purchased",          "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Score Up Emblem Purchased",                  "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Slow Nopwatch Emblem Purchased",             "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Small-Unit Tactics Emblem Purchased",        "item_count": 1, "visibility_rules": "Emblems" },
-          { "name": "Ticket Line Emblem Purchased",               "item_count": 1, "visibility_rules": "UnlockableEmblems,Emblems" },
-          { "name": "Tickle Whimsy Emblem Purchased",             "item_count": 1, "visibility_rules": "Emblems" }
+          { "name": "Max HP Up Emblem Purchased",                 "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Moneybags Emblem Purchased",                 "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Other Prosperity Emblem Purchased",          "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Other Zeal Emblem Purchased",                "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Refund Chain Emblem Purchased",              "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Rescue Recharge Emblem Purchased",           "item_count": 1, "access_rules": ["^$isEmblemInLogic|3"], "visibility_rules": [ "UnlockableEmblems,Emblems" ] },
+          { "name": "Rescue to Attack Emblem Purchased",          "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Score Up Emblem Purchased",                  "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Slow Nopwatch Emblem Purchased",             "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "UnlockableEmblems,Emblems" ] },
+          { "name": "Small-Unit Tactics Emblem Purchased",        "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] },
+          { "name": "Ticket Line Emblem Purchased",               "item_count": 1, "access_rules": ["^$isEmblemInLogic|2"], "visibility_rules": [ "UnlockableEmblems,Emblems" ] },
+          { "name": "Tickle Whimsy Emblem Purchased",             "item_count": 1, "access_rules": ["^$isEmblemInLogic|1"], "visibility_rules": [ "Emblems" ] }
         ],
         "map_locations": [{ "map": "map1", "x": 750, "y": 1250 }]
       }
