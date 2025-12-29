@@ -14,6 +14,7 @@ This is a Manual APWorld that can be used with the Archsage's Gauntlet in Xenobl
   - The highest stage you plan to complete (minimum 30, maximum 140)
   - Whether recruiting every hero is required
 - Do not use Infinity Blade or Unlimited Sword until you receive/collect the Lucky Seven License.
+- One-star emblems are always considered in logic (if included in YAML). Two-star emblems are in logic about 1/3 of the way through your included stages. Three-star emblems are in logic about 2/3 through. Unlike stage unlock keys, you are allowed to go out of logic and purchase these early.
 - If you have Traps enabled, you may occasionally receive/collect a Skip Next Shop trap. When you do, buy nothing from the next shop you encounter at the end of a stage.
 
 ## YAML Options:
@@ -21,6 +22,8 @@ This is a Manual APWorld that can be used with the Archsage's Gauntlet in Xenobl
 - DLC: Set based on whether you want Masha and Ino to be included as locations (recruitments) and items (hero and class unlocks).
 - Future Redeemed: Set based on whether you want Shulk and Rex to be included as locations (recruitments) and items (hero unlocks; class unlocks are included as filler items as no party member can inherit these classes).
 - Post Game: Set based on whether you want Nia and Melia to be included as locations (recruitments) and items (hero and class unlocks).
+- Emblems: Set based on whether emblem purchases between stages are to be included as locations.
+- Unlockable Emblems: Set based on whether the above emblem locations should include the emblems that must be purchased between runs using Blue Noponstone.
 - Highest Stage Required: Choose a value between 30 and 140, inclusive.  Beginner (30), Intermediate (50), and Pro (140) are included as standard values.
 - All Heroes Required: Set based on whether you want your Victory condition to require recruiting every hero in the pool.
 
