@@ -6,15 +6,14 @@ on:
 jobs:
   fuzz:
     runs-on: ubuntu-latest
+    env:
+      AP_TEST_WORLDS: manual_xenobladechronicles3ag_garfunkiel
     steps:
-      - name: Get latest AP Version
-        id: get_latest_ap_version
-        run: |
-          echo "AP_VERSION=`wget https://github.com/ArchipelagoMW/Archipelago/releases/latest 2>&1 | grep Location: | awk '{print $2}' | rev | cut -d "/" -f 1 | rev`" >> "$GITHUB_ENV"
       - uses: Eijebong/ap-actions/fuzz@main
         with:
           apworld-path: manual_xenobladechronicles3ag_garfunkiel
-          ap-version: ${{ env.AP_VERSION }}
+          fuzzer-commit: 53686ba34f9e8852cbe1970666a5f56fd6abf75a
+          ap-version: 'latest'
           python-version: '3.12'
           runs: 50 # This is optional
           yamls-per-run: 1 # This is optional
