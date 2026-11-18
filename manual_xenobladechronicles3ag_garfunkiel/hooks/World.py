@@ -61,23 +61,12 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     """
 
     # Add your code here to calculate which locations to exclude
-    locationNamesToRemove: list[str] = [] # List of location names
-
-    # Add your code here to calculate which locations to remove
-    highest_stage = get_option_value(multiworld, player, "highest_stage_required")
-    if (isinstance(highest_stage, int)):
-        for i in range(highest_stage + 1, 141):
-            locationNamesToRemove.append(f"Stage {i:03d} Cleared")
-
     for region in multiworld.regions:
         if region.player == player:
             for location in region.locations:
-                if location.name in locationNamesToRemove:
-                    region.locations.remove(location)
-
-    # If you have other things you want to modify, you can do it here as well.
-    # The fields you might care about are: item_rule, always_allow, progress_type, and show_in_spoiler.
-    pass
+                # If you have other things you want to modify, you can do it here as well.
+                # The fields you might care about are: item_rule, always_allow, progress_type, and show_in_spoiler.
+                pass
 
 # This hook allows you to access the item names & counts before the items are created. Use this to increase/decrease the amount of a specific item in the pool
 # Valid item_config key/values:
