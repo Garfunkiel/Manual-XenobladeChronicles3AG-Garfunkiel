@@ -1,9 +1,12 @@
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from worlds.AutoWorld import World
 from ..Helpers import clamp, get_items_with_value, is_option_enabled, get_option_value
 from BaseClasses import MultiWorld, CollectionState
 
 import re
+
+if TYPE_CHECKING:
+    from .. import ManualWorld
 
 def isEmblemInLogic(multiworld: MultiWorld, player: int, rarity: str):
     highest_stage = get_option_value(multiworld, player, "highest_stage_required")
@@ -29,6 +32,14 @@ def isEmblemInLogic(multiworld: MultiWorld, player: int, rarity: str):
 
     return rule
 
+def isEmblemInLogicRule(player: int, rarity: str, world: "ManualWorld") -> str:
+    value = isEmblemInLogic(world.multiworld, player, rarity)
+    if (value == True):
+        return ""
+    if (value == False):
+        raise Exception("isEmblemInLogic returned False")
+    return value
+
 def canClaimVictory(multiworld: MultiWorld, player: int):
     highest_stage = get_option_value(multiworld, player, "highest_stage_required")
     all = get_option_value(multiworld, player, "all_heroes_required")
@@ -50,6 +61,14 @@ def canClaimVictory(multiworld: MultiWorld, player: int):
         counter += 10
 
     return rule
+
+def canClaimVictoryRule(player: int, world: "ManualWorld") -> str:
+    value = canClaimVictory(world.multiworld, player)
+    if (value == True):
+        return ""
+    if (value == False):
+        raise Exception("canClaimVictory returned False")
+    return value
 
 # Sometimes you have a requirement that is just too messy or repetitive to write out with boolean logic.
 # Define a function here, and you can use it in a requires string with {function_name()}.
