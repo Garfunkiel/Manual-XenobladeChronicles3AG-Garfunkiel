@@ -1,8 +1,6 @@
 from typing import Optional, Any
 from BaseClasses import MultiWorld
 
-from ..Helpers import get_option_value
-
 import re
 
 # Use this if you want to override the default behavior of is_option_enabled
@@ -18,6 +16,7 @@ def before_is_item_enabled(multiworld: MultiWorld, player: int, item:  dict[str,
 # Use this if you want to override the default behavior of is_option_enabled
 # Return True to enable the location, False to disable it, or None to use the default behavior
 def before_is_location_enabled(multiworld: MultiWorld, player: int, location:  dict[str, Any]) -> Optional[bool]:
+    from ..Helpers import get_option_value
 
     # Any location in the format "Stage ### Cleared" should be disabled if the number is greater than the highest stage required
     stage_regex_match = re.fullmatch(r"Stage (\d{3}) Cleared", location["name"])
