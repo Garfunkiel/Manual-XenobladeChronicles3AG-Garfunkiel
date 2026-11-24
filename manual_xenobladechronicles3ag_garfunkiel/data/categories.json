@@ -12,6 +12,10 @@
         "hidden": false,
         "yaml_option": ["PostGame"]
     },
+    "Switch 2": {
+        "hidden": false,
+        "yaml_option": ["Switch2"]
+    },
     "Emblems": {
         "hidden": false,
         "yaml_option": ["Emblems"]
@@ -19,5 +23,18 @@
     "Unlockable Emblems": {
         "hidden": false,
         "yaml_option": ["UnlockableEmblems"]
+    },
+    "Archsage's Whimsy": {
+        "hidden": false,
+        "yaml_option": ["ArchsagesWhimsy"]
+    },
+    "BeginnerStages": {
+        "hidden": false
+    },
+    "IntermediateStages": {
+        "hidden": false
+    },
+    "ProStages": {
+        "hidden": false
     }
 }

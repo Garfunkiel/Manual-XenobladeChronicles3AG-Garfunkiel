@@ -1,4 +1,5 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
+from Options import OptionError
 from typing import Any
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
@@ -97,15 +98,32 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     # Because multiple copies of an item can exist, you need to add an item name
     # to the list multiple times if you want to remove multiple copies of it.
 
-    highest_stage = get_option_value(multiworld, player, "highest_stage_required")
-    if (isinstance(highest_stage, int)):
-        counter = 131
+    def isGauntletIncluded(multiworld: MultiWorld, player: int, difficulty: str):
+        gauntlets_included = int(get_option_value(multiworld, player, "gauntlets_included"))
+        difficulty_map = {
+            "beginner": 1,
+            "intermediate": 2,
+            "pro": 4
+        }
+        return (gauntlets_included & difficulty_map.get(difficulty, 0)) != 0
 
-        while (highest_stage < counter):
-            itemNamesToRemove.append(f"Stage {counter:03d} Unlock Key")
-            itemNamesToRemove.append(f"Stage {counter:03d} Unlock Key")
-            itemNamesToRemove.append(f"Stage {counter:03d} Unlock Key")
-            counter -= 10
+    if isGauntletIncluded(multiworld, player, "pro"):
+        keys_to_remove = 0
+    elif isGauntletIncluded(multiworld, player, "intermediate"):
+        keys_to_remove = 1
+    else:
+        keys_to_remove = 2
+
+    highest_stage = int(get_option_value(multiworld, player, "highest_stage_required"))
+
+    for stage in range(11, 132, 10):
+        if stage > highest_stage:
+            itemNamesToRemove.append(f"Stage {stage:03d} Unlock Key")
+            itemNamesToRemove.append(f"Stage {stage:03d} Unlock Key")
+            itemNamesToRemove.append(f"Stage {stage:03d} Unlock Key")
+        else:
+            for _ in range(keys_to_remove):
+                itemNamesToRemove.append(f"Stage {stage:03d} Unlock Key")
 
     for itemName in itemNamesToRemove:
         item = next(i for i in item_pool if i.name == itemName)

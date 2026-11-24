@@ -2,57 +2,83 @@
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
     "ChallengeStart": {
         "starting": true,
-        "connects_to": ["Stages011+"]
+        "connects_to": ["BeginnerStages011+", "IntermediateStages011+", "ProStages011+"]
     },
-    "Stages011+": {
-        "requires": "|Stage 011 Unlock Key:1|",
-        "connects_to": ["Stages021+"]
+    "BeginnerStages011+": {
+        "requires": "{isRegionAccessible(11,beginner)}",
+        "connects_to": ["BeginnerStages021+"]
     },
-    "Stages021+": {
-        "requires": "|Stage 021 Unlock Key:1|",
-        "connects_to": ["Stages031+"]
+    "BeginnerStages021+": {
+        "requires": "{isRegionAccessible(21,beginner)}",
+        "connects_to": ["BeginnerStages031+"]
     },
-    "Stages031+": {
-        "requires": "|Stage 031 Unlock Key:1|",
-        "connects_to": ["Stages041+"]
+    "BeginnerStages031+": {
+        "requires": "{isRegionAccessible(31,beginner)}"
     },
-    "Stages041+": {
-        "requires": "|Stage 041 Unlock Key:1|",
-        "connects_to": ["Stages051+"]
+    "IntermediateStages011+": {
+        "requires": "{isRegionAccessible(11,intermediate)}",
+        "connects_to": ["IntermediateStages021+"]
     },
-    "Stages051+": {
-        "requires": "|Stage 051 Unlock Key:1|",
-        "connects_to": ["Stages061+"]
+    "IntermediateStages021+": {
+        "requires": "{isRegionAccessible(21,intermediate)}",
+        "connects_to": ["IntermediateStages031+"]
     },
-    "Stages061+": {
-        "requires": "|Stage 061 Unlock Key:1|",
-        "connects_to": ["Stages071+"]
+    "IntermediateStages031+": {
+        "requires": "{isRegionAccessible(31,intermediate)}",
+        "connects_to": ["IntermediateStages041+"]
     },
-    "Stages071+": {
-        "requires": "|Stage 071 Unlock Key:1|",
-        "connects_to": ["Stages081+"]
+    "IntermediateStages041+": {
+        "requires": "{isRegionAccessible(41,intermediate)}"
     },
-    "Stages081+": {
-        "requires": "|Stage 081 Unlock Key:1|",
-        "connects_to": ["Stages091+"]
+    "ProStages011+": {
+        "requires": "{isRegionAccessible(11,pro)}",
+        "connects_to": ["ProStages021+"]
     },
-    "Stages091+": {
-        "requires": "|Stage 091 Unlock Key:1|",
-        "connects_to": ["Stages101+"]
+    "ProStages021+": {
+        "requires": "{isRegionAccessible(21,pro)}",
+        "connects_to": ["ProStages031+"]
     },
-    "Stages101+": {
-        "requires": "|Stage 101 Unlock Key:1|",
-        "connects_to": ["Stages111+"]
+    "ProStages031+": {
+        "requires": "{isRegionAccessible(31,pro)}",
+        "connects_to": ["ProStages041+"]
     },
-    "Stages111+": {
-        "requires": "|Stage 111 Unlock Key:1|",
-        "connects_to": ["Stages121+"]
+    "ProStages041+": {
+        "requires": "{isRegionAccessible(41,pro)}",
+        "connects_to": ["ProStages051+"]
     },
-    "Stages121+": {
-        "requires": "|Stage 121 Unlock Key:1|",
-        "connects_to": ["Stages131+"]
+    "ProStages051+": {
+        "requires": "{isRegionAccessible(51,pro)}",
+        "connects_to": ["ProStages061+"]
     },
-    "Stages131+": {
-        "requires": "|Stage 131 Unlock Key:1|"
+    "ProStages061+": {
+        "requires": "{isRegionAccessible(61,pro)}",
+        "connects_to": ["ProStages071+"]
+    },
+    "ProStages071+": {
+        "requires": "{isRegionAccessible(71,pro)}",
+        "connects_to": ["ProStages081+"]
+    },
+    "ProStages081+": {
+        "requires": "{isRegionAccessible(81,pro)}",
+        "connects_to": ["ProStages091+"]
+    },
+    "ProStages091+": {
+        "requires": "{isRegionAccessible(91,pro)}",
+        "connects_to": ["ProStages101+"]
+    },
+    "ProStages101+": {
+        "requires": "{isRegionAccessible(101,pro)}",
+        "connects_to": ["ProStages111+"]
+    },
+    "ProStages111+": {
+        "requires": "{isRegionAccessible(111,pro)}",
+        "connects_to": ["ProStages121+"]
+    },
+    "ProStages121+": {
+        "requires": "{isRegionAccessible(121,pro)}",
+        "connects_to": ["ProStages131+"]
+    },
+    "ProStages131+": {
+        "requires": "{isRegionAccessible(131,pro)}"
     }
 }

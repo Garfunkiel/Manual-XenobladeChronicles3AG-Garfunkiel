@@ -22,12 +22,28 @@
         }
     },
     "user": {
+        "gauntlets_included": {
+            "display_name": "Gauntlets Included",
+            "description": "Which gauntlets should be included in logic?",
+            "type": "Choice",
+            "default": 7,
+            "values": {
+                "beginner": 1,
+                "intermediate": 2,
+                "beginner_intermediate": 3,
+                "pro": 4,
+                "beginner_pro": 5,
+                "intermediate_pro": 6,
+                "all": 7
+            },
+            "group": "Options"
+        },
         "highest_stage_required": {
             "display_name": "Highest Stage Required",
-            "description": "What stage should be the highest one in logic?",
+            "description": "What stage should be the highest one in logic? This will be clamped automatically if the value you choose is not possible with the gauntlets you select to include.",
             "type": "Range",
             "range_start": 30,
-            "default": 140,
+            "default": 70,
             "range_end": 140,
             "values": {
                 "beginner": 30,
@@ -41,6 +57,15 @@
             "description": "Must all heroes be recruited to win?",
             "type": "Toggle",
             "default": false,
+            "group": "Options"
+        },
+        "nopwatch_refill_stage": {
+            "display_name": "Nopwatch Refill Stage",
+            "description": "At what stage do you want buying Nopwatch refills to start being expected for logic purposes?",
+            "type": "Range",
+            "range_start": 1,
+            "default": 20,
+            "range_end": 140,
             "group": "Options"
         }
     }

@@ -14,8 +14,9 @@
         { "name": "Stage 111 Unlock Key",  "count": 3,  "category": [ "Unlock Key" ],                       "progression": true },
         { "name": "Stage 121 Unlock Key",  "count": 3,  "category": [ "Unlock Key" ],                       "progression": true },
         { "name": "Stage 131 Unlock Key",  "count": 3,  "category": [ "Unlock Key" ],                       "progression": true },
+        { "name": "Chain Attack License",               "category": [ "Unlocks" ],                          "useful": true },
         { "name": "Lucky Seven License",                "category": [ "Unlocks" ],                          "useful": true },
-        { "name": "Nopwatch Refills",      "count": 10, "category": [ "Unlocks" ],                          "useful": true },
+        { "name": "Nopwatch Refill License",            "category": [ "Unlocks" ],                          "progression": true },
         { "name": "Chosen Hero Unlock",    "count": 3,  "category": [ "Unlocks" ],                          "progression": true },
         { "name": "Chosen Class Unlock",                "category": [ "Unlocks" ],                          "useful": true },
         { "name": "Noah",                               "category": [ "MainParty" ],                        "progression": true },
@@ -47,6 +48,7 @@
         { "name": "Masha, Jewelwright",                 "category": [ "Heroes", "DLC" ],                    "progression": true },
         { "name": "Shulk, Godcleaver",                  "category": [ "Heroes", "Future Redeemed" ],        "progression": true },
         { "name": "Rex, Stoutheart",                    "category": [ "Heroes", "Future Redeemed" ],        "progression": true },
+        { "name": "Shimmer, Lumen Knight",              "category": [ "Heroes", "Switch 2" ],               "progression": true },
         { "name": "Mwamba",                             "category": [ "FallenHero" ],                       "filler": true },
         { "name": "Swordfighter",                       "category": [ "MainPartyClasses", "Classes" ],      "useful": true, "local": true, "early": true },
         { "name": "Zephyr",                             "category": [ "MainPartyClasses", "Classes" ],      "useful": true, "local": true, "early": true },
@@ -77,6 +79,7 @@
         { "name": "Lapidarist",                         "category": [ "Classes", "DLC" ],                   "useful": true },
         { "name": "Grand Marshal",                      "category": [ "Classes", "Future Redeemed" ],       "filler": true },
         { "name": "Master Driver",                      "category": [ "Classes", "Future Redeemed" ],       "filler": true },
+        { "name": "Lumen Knight",                       "category": [ "Classes", "Switch 2" ],              "filler": true, "_comment": "Unknown if this class can be used by party" },
         { "name": "Sharpshooter",                       "category": [ "Classes" ],                          "filler": true },
         { "name": "Skip Next Shop",       "count": 0,   "category": [ "Traps" ],                            "trap": true }
     ]
