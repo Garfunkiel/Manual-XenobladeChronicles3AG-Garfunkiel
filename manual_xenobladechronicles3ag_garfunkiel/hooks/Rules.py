@@ -23,21 +23,38 @@ def getClampedStageRequirement(multiworld: MultiWorld, player: int) -> int:
     else:
         return min(highest_stage, MAX_BEGINNER)
 
+def getRequiredKeyCountForBeginner(multiworld: MultiWorld, player: int) -> int:
+    return 1
+
+def getRequiredKeyCountForIntermediate(multiworld: MultiWorld, player: int) -> int:
+    if isGauntletIncluded(multiworld, player, "beginner"):
+        return 2
+    else:
+        return 1
+
+def getRequiredKeyCountForPro(multiworld: MultiWorld, player: int) -> int:
+    if isGauntletIncluded(multiworld, player, "beginner") and isGauntletIncluded(multiworld, player, "intermediate"):
+        return 3
+    elif isGauntletIncluded(multiworld, player, "intermediate"):
+        return 2
+    else:
+        return 1
+
+def getMaxRequiredKeyCount(multiworld: MultiWorld, player: int) -> int:
+    if isGauntletIncluded(multiworld, player, "pro"):
+        return getRequiredKeyCountForPro(multiworld, player)
+    elif isGauntletIncluded(multiworld, player, "intermediate"):
+        return getRequiredKeyCountForIntermediate(multiworld, player)
+    else:
+        return getRequiredKeyCountForBeginner(multiworld, player)
+
 def isRegionAccessible(multiworld: MultiWorld, player: int, stage: str, gauntlet: str) -> bool|str:
     if gauntlet == "beginner":
-        keyrequirement = "1"
+        keyrequirement = str(getRequiredKeyCountForBeginner(multiworld, player))
     elif gauntlet == "intermediate":
-        if isGauntletIncluded(multiworld, player, "beginner"):
-            keyrequirement = "2"
-        else:
-            keyrequirement = "1"
+        keyrequirement = str(getRequiredKeyCountForIntermediate(multiworld, player))
     elif gauntlet == "pro":
-        if isGauntletIncluded(multiworld, player, "beginner") and isGauntletIncluded(multiworld, player, "intermediate"):
-            keyrequirement = "3"
-        elif isGauntletIncluded(multiworld, player, "intermediate"):
-            keyrequirement = "2"
-        else:
-            keyrequirement = "1"
+        keyrequirement = str(getRequiredKeyCountForPro(multiworld, player))
     else:
         raise Exception("Invalid gauntlet specified")
 
@@ -70,16 +87,7 @@ def isGauntletIncluded(multiworld: MultiWorld, player: int, difficulty: str) -> 
 
 def isEmblemInLogic(multiworld: MultiWorld, player: int, rarity: str):
     highest_stage = getClampedStageRequirement(multiworld, player)
-
-    if isGauntletIncluded(multiworld, player, "beginner"):
-        keyrequirement = "1"
-    elif isGauntletIncluded(multiworld, player, "intermediate"):
-        keyrequirement = "2"
-    elif isGauntletIncluded(multiworld, player, "pro"):
-        keyrequirement = "3"
-    else:
-        raise Exception("Invalid gauntlet specified")
-
+    keyrequirement = str(getMaxRequiredKeyCount(multiworld, player))
     stars = int(rarity)
 
     if (stars <= 1):
@@ -109,20 +117,8 @@ def isEmblemInLogicRule(player: int, rarity: str, world: "ManualWorld") -> str:
 def canClaimVictory(multiworld: MultiWorld, player: int):
     highest_stage = getClampedStageRequirement(multiworld, player)
     all = get_option_value(multiworld, player, "all_heroes_required")
-
-    if isGauntletIncluded(multiworld, player, "pro"):
-        keyrequirement = "3"
-    elif isGauntletIncluded(multiworld, player, "intermediate"):
-        keyrequirement = "2"
-    elif isGauntletIncluded(multiworld, player, "beginner"):
-        keyrequirement = "1"
-    else:
-        raise Exception("No valid difficulty included")
-
-    rule = ""
-
-    if (all):
-        rule = "|@Heroes:ALL|"
+    keyrequirement = getMaxRequiredKeyCount(multiworld, player)
+    rule = "" if not all else "|@Heroes:ALL|"
 
     counter = 11
 
