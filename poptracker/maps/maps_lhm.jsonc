@@ -1,0 +1,21 @@
+[
+  //more info: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#maps
+  {
+    "name": "map1",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/map_lhm.png"
+  },
+  {
+    "name": "map_emblems",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/emblems.png"
+  },
+  {
+    "name": "map_whimsy",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/whimsy.png"
+  }
+]

@@ -71,6 +71,15 @@
                   "map_emblems"
                 ]
               }
+            },
+            {
+              "title": "Whimsy",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "map_whimsy"
+                ]
+              }
             }
           ]
         }
@@ -156,6 +165,15 @@
                 "type": "map",
                 "maps": [
                   "map_emblems"
+                ]
+              }
+            },
+            {
+              "title": "Whimsy",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "map_whimsy"
                 ]
               }
             }

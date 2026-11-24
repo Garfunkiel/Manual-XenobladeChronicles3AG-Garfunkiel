@@ -34,6 +34,7 @@
               ],
               [
                 "UnlockKeys13",
+                "ChainAttackLicense",
                 "LuckySevenLicense",
                 "NopwatchRefills",
                 "ChosenHeroUnlock",
@@ -98,7 +99,7 @@
                 "Masha",
                 "Shulk",
                 "Rex",
-                "Mwamba"
+                "Shimmer"
               ]
             ]
           }
@@ -159,7 +160,7 @@
                 "Lapidarist",
                 "GrandMarshal",
                 "MasterDriver",
-                "Sharpshooter"
+                "LumenKnight"
               ]
             ]
           }
@@ -184,7 +185,9 @@
             "rows": [
               [
                 "SkipNextShop",
-                "ItsMwambinTime"
+                "ItsMwambinTime",
+                "Mwamba",
+                "Sharpshooter"
               ]
             ]
           }

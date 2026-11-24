@@ -135,11 +135,15 @@ function apply_slot_data(slot_data)
 
     setFromSlotData('Emblems', 'Emblems')
     setFromSlotData('UnlockableEmblems', 'UnlockableEmblems')
+	setFromSlotData('ArchsagesWhimsy', 'ArchsagesWhimsy')
     setFromSlotData('DLC', 'DLC')
     setFromSlotData('FutureRedeemed', 'FutureRedeemed')
     setFromSlotData('PostGame', 'PostGame')
+    setFromSlotData('Switch2', 'Switch2')
+	setFromSlotData('gauntlets_included', 'gauntlets_included')
     setFromSlotData('highest_stage_required', 'highest_stage_required')
     setFromSlotData('all_heroes_required', 'all_heroes_required')
+	setFromSlotData('nopwatch_refill_stage', 'nopwatch_refill_stage')
 
 	-- put any code here that slot_data should affect (toggling setting items for example)
 end

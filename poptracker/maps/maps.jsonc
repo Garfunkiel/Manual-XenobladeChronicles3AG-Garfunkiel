@@ -11,5 +11,11 @@
     "location_size": 48,
     "location_border_thickness": 4,
     "img": "images/maps/emblems.png"
+  },
+  {
+    "name": "map_whimsy",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/whimsy.png"
   }
 ]

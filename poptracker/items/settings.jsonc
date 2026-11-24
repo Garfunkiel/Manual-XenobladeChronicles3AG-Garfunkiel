@@ -30,6 +30,12 @@
     "initial_active_state": true
   },
   {
+    "name": "Switch2",
+    "type": "toggle",
+    "codes": "Switch2,Switch2_on",
+    "initial_active_state": true
+  },
+  {
     "name": "highest_stage_required",
     "type": "consumable",
     "codes": "highest_stage_required",

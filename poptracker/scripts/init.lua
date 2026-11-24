@@ -5,6 +5,7 @@ ENABLE_DEBUG_LOG = true
 local variant = Tracker.ActiveVariantUID
 -- check variant info
 IS_ITEMS_ONLY = variant:find("itemsonly")
+IS_LONGHAIR_MIO = variant:find("standard")
 
 print("-- Example Tracker --")
 print("Loaded variant: ", variant)
@@ -27,10 +28,13 @@ ScriptHost:LoadScript("scripts/custom_items/progressiveTogglePlusWrapper.lua")
 Tracker:AddItems("items/items.jsonc")
 Tracker:AddItems("items/settings.jsonc")
 
-if not IS_ITEMS_ONLY then -- <--- use variant info to optimize loading
+if not IS_LONGHAIR_MIO and not IS_ITEMS_ONLY then -- <--- use variant info to optimize loading
     -- Maps
     Tracker:AddMaps("maps/maps.jsonc")
     -- Locations
+    Tracker:AddLocations("locations/locations.jsonc")
+elseif IS_LONGHAIR_MIO and not IS_ITEMS_ONLY then
+    Tracker:AddMaps("maps/maps_lhm.jsonc")
     Tracker:AddLocations("locations/locations.jsonc")
 end
 
