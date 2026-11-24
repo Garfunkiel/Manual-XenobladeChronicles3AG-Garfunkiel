@@ -27,9 +27,17 @@ def isRegionAccessible(multiworld: MultiWorld, player: int, stage: str, gauntlet
     if gauntlet == "beginner":
         keyrequirement = "1"
     elif gauntlet == "intermediate":
-        keyrequirement = "2"
+        if isGauntletIncluded(multiworld, player, "beginner"):
+            keyrequirement = "2"
+        else:
+            keyrequirement = "1"
     elif gauntlet == "pro":
-        keyrequirement = "3"
+        if isGauntletIncluded(multiworld, player, "beginner") and isGauntletIncluded(multiworld, player, "intermediate"):
+            keyrequirement = "3"
+        elif isGauntletIncluded(multiworld, player, "intermediate"):
+            keyrequirement = "2"
+        else:
+            keyrequirement = "1"
     else:
         raise Exception("Invalid gauntlet specified")
 
