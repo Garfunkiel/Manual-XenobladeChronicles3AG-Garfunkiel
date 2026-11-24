@@ -98,7 +98,22 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     # Because multiple copies of an item can exist, you need to add an item name
     # to the list multiple times if you want to remove multiple copies of it.
 
+    def isGauntletIncluded(multiworld: MultiWorld, player: int, difficulty: str):
+        gauntlets_included = int(get_option_value(multiworld, player, "gauntlets_included"))
+        difficulty_map = {
+            "beginner": 1,
+            "intermediate": 2,
+            "pro": 4
+        }
+        return (gauntlets_included & difficulty_map.get(difficulty, 0)) != 0
+
     highest_stage = int(get_option_value(multiworld, player, "highest_stage_required"))
+
+    if not isGauntletIncluded(multiworld, player, "pro"):
+        highest_stage = min(highest_stage, 50)
+
+    if (not isGauntletIncluded(multiworld, player, "pro")) and (not isGauntletIncluded(multiworld, player, "intermediate")):
+        highest_stage = min(highest_stage, 30)
 
     for stage in range(11, 132, 10):
         if stage > highest_stage:
