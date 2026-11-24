@@ -35,7 +35,7 @@ def getRequiredKeyCountForIntermediate(multiworld: MultiWorld, player: int) -> i
 def getRequiredKeyCountForPro(multiworld: MultiWorld, player: int) -> int:
     if isGauntletIncluded(multiworld, player, "beginner") and isGauntletIncluded(multiworld, player, "intermediate"):
         return 3
-    elif isGauntletIncluded(multiworld, player, "intermediate"):
+    elif isGauntletIncluded(multiworld, player, "intermediate") or isGauntletIncluded(multiworld, player, "beginner"):
         return 2
     else:
         return 1
@@ -104,6 +104,12 @@ def isEmblemInLogic(multiworld: MultiWorld, player: int, rarity: str):
         rule += f"|Stage {counter:03d} Unlock Key:{keyrequirement}|"
         counter += 10
 
+    nopwatch_refill_stage = int(get_option_value(multiworld, player, "nopwatch_refill_stage"))
+    if (nopwatch_refill_stage <= (mult * highest_stage + 1)):
+        if (rule != ""):
+            rule += " AND "
+        rule += "|Nopwatch Refill License|"
+
     return rule
 
 def isEmblemInLogicRule(player: int, rarity: str, world: "ManualWorld") -> str:
@@ -127,6 +133,12 @@ def canClaimVictory(multiworld: MultiWorld, player: int):
             rule += " AND "
         rule += f"|Stage {counter:03d} Unlock Key:{keyrequirement}|"
         counter += 10
+
+    nopwatch_refill_stage = int(get_option_value(multiworld, player, "nopwatch_refill_stage"))
+    if (nopwatch_refill_stage <= highest_stage):
+        if (rule != ""):
+            rule += " AND "
+        rule += "|Nopwatch Refill License|"
 
     return rule
 
