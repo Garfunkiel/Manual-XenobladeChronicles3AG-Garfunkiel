@@ -81,5 +81,7 @@
   { "name": "Lumen Knight",                 "type": "toggle",     "img": "images/items/classes/lumen_knight.png",           "codes": "Classes,LumenKnight" },
   { "name": "Sharpshooter (Filler)",        "type": "toggle",     "img": "images/items/classes/sharpshooter.png",           "codes": "Classes,Sharpshooter" },
   { "name": "Skip Next Shop (Trap)",        "type": "consumable", "img": "images/items/skip_next_shop.png",      "max_quantity": 1000,    "codes": "Traps,SkipNextShop"   },
-  { "name": "It's Mwambin' Time (Filler)",  "type": "consumable", "img": "images/items/its_mwambin_time.png",    "max_quantity": 1000,    "codes": "Filler,ItsMwambinTime" }
+  { "name": "It's Mwambin' Time (Filler)",  "type": "consumable", "img": "images/items/its_mwambin_time.png",    "max_quantity": 1000,    "codes": "Filler,ItsMwambinTime" },
+  { "name": "Highest Stage Required",       "type": "consumable", "img": "images/items/its_mwambin_time.png",    "max_quantity": 140,     "codes": "Settings,highest_stage_required" },
+  { "name": "All Heroes Required",          "type": "toggle",     "img": "images/items/its_mwambin_time.png",                             "codes": "Settings,all_heroes_required_on" }
 ]

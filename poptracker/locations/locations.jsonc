@@ -3,7 +3,7 @@
     "name": "Victory",
     "children": [
       { "name": "Gauntlet Complete", "sections": [
-        { "name": "", "item_count": 1, "access_rules": [ "^$canClaimVictory" ] }
+        { "name": "", "item_count": 1, "access_rules": [ "^$CanClaimVictory" ] }
       ], "map_locations": [{ "map": "map1", "x": 2725, "y": 1380 } ]}
     ]
   },

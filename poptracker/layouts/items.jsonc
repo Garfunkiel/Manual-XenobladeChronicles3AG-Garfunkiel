@@ -187,7 +187,9 @@
                 "SkipNextShop",
                 "ItsMwambinTime",
                 "Mwamba",
-                "Sharpshooter"
+                "Sharpshooter",
+                "highest_stage_required",
+                "all_heroes_required_on"
               ]
             ]
           }
